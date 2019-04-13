@@ -75,6 +75,7 @@
 		9F4CD1DD2261AE0D005A14BD /* RxWeChat */ = {
 			isa = PBXGroup;
 			children = (
+				9F4CD1FF2261CFA1005A14BD /* RxWeChat-Bridging-Header.h */,
 				9F4CD1FB2261CFA1005A14BD /* Classes */,
 				9F4CD1DE2261AE0D005A14BD /* AppDelegate.swift */,
 				9F4CD1E02261AE0D005A14BD /* ViewController.swift */,
@@ -99,7 +100,6 @@
 			children = (
 				9F4CD1FD2261CFA1005A14BD /* Model.swift */,
 				9F4CD1FE2261CFA1005A14BD /* WeChat.swift */,
-				9F4CD1FF2261CFA1005A14BD /* RxWeChat-Bridging-Header.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.raisechestnut.RxWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Core/RxWeChat-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RxWeChat/RxWeChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,7 +419,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.raisechestnut.RxWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Core/RxWeChat-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RxWeChat/RxWeChat-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
