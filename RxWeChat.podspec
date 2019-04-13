@@ -66,12 +66,14 @@ Pod::Spec.new do |spec|
 
   # spec.platform     = :ios
   spec.platform     = :ios, "9.0"
+  spec.swift_version = "4.2"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
+  
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -94,6 +96,8 @@ Pod::Spec.new do |spec|
   spec.source_files  = "Classes", "Classes/**/*.{h,swift}"
   spec.vendored_libraries  = 'Classes/SDK/libWeChatSDK.a'
   spec.public_header_files = 'Classes/**/*.h'
+
+  spec.static_framework = true
 
   spec.frameworks = 'SystemConfiguration', 'Security', 'CoreTelephony', 'CFNetwork', 'UIKit'
   spec.libraries = 'z', 'c++', 'sqlite3.0'
