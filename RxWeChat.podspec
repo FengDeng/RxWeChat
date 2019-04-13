@@ -90,54 +90,20 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  #坑爹，静态库 打包有问题，只能这样引用了 腾讯不包framework，sb腾讯。
+  spec.source_files  = "Classes", "Classes/**/*.{h,swift}"
+  spec.vendored_libraries  = 'Classes/SDK/libWeChatSDK.a'
+  spec.public_header_files = 'Classes/SDK/*.h'
 
-  spec.source_files  = "Classes", "Classes/**/*"
-  #spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-  # 
-  spec.static_framework = true
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
+  spec.frameworks = 'SystemConfiguration', 'Security', 'CoreTelephony', 'CFNetwork', 'UIKit'
+  spec.libraries = 'z', 'c++', 'sqlite3.0'
+  spec.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -all_load' }
 
   spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
   # 
-  spec.dependency "WechatOpenSDK", "~> 1.8.4"
   spec.dependency "RxSwift", "~> 4.5.0"
   spec.dependency "RxCocoa", "~> 4.5.0"
   spec.dependency "Action", "~> 3.10.2"

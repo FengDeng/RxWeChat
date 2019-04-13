@@ -6,7 +6,8 @@ target 'RxWeChat' do
   use_frameworks!
 
   # Pods for RxWeChat
-  pod 'WechatOpenSDK','1.8.4' 
+  ###坑爹，静态库 打包有问题 腾讯不包framework，sb腾讯。
+  pod 'WechatOpenSDK','1.8.4'
   pod 'RxSwift','4.5.0'
   pod 'RxCocoa','4.5.0'
   pod 'Action','3.10.2'
