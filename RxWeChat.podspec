@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   #坑爹，静态库 打包有问题，只能这样引用了 腾讯不包framework，sb腾讯。
   spec.source_files  = "Classes", "Classes/**/*.{h,swift}"
   spec.vendored_libraries  = 'Classes/SDK/libWeChatSDK.a'
-  spec.public_header_files = 'Classes/SDK/*.h'
+  spec.public_header_files = 'Classes/**/*.h'
 
   spec.frameworks = 'SystemConfiguration', 'Security', 'CoreTelephony', 'CFNetwork', 'UIKit'
   spec.libraries = 'z', 'c++', 'sqlite3.0'
