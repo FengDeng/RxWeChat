@@ -14,6 +14,7 @@
 		9F4CD1E92261AE0F005A14BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CD1E72261AE0F005A14BD /* LaunchScreen.storyboard */; };
 		9F4CD2002261CFA1005A14BD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CD1FD2261CFA1005A14BD /* Model.swift */; };
 		9F4CD2012261CFA1005A14BD /* WeChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CD1FE2261CFA1005A14BD /* WeChat.swift */; };
+		9F4CD20E2261E2F8005A14BD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4CD20D2261E2F8005A14BD /* libWeChatSDK.a */; };
 		BB0433ED674D1FB90E837F4B /* Pods_RxWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2B4503ADEB1CE2792A58EF /* Pods_RxWeChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,11 @@
 		9F4CD1FD2261CFA1005A14BD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9F4CD1FE2261CFA1005A14BD /* WeChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChat.swift; sourceTree = "<group>"; };
 		9F4CD1FF2261CFA1005A14BD /* RxWeChat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RxWeChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F4CD2092261E2F8005A14BD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		9F4CD20A2261E2F8005A14BD /* WeChatSDK.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = WeChatSDK.modulemap; sourceTree = "<group>"; };
+		9F4CD20B2261E2F8005A14BD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		9F4CD20C2261E2F8005A14BD /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		9F4CD20D2261E2F8005A14BD /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		B2237AB477466D6C266F8E06 /* Pods-RxWeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxWeChat.release.xcconfig"; path = "Target Support Files/Pods-RxWeChat/Pods-RxWeChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4CD20E2261E2F8005A14BD /* libWeChatSDK.a in Frameworks */,
 				BB0433ED674D1FB90E837F4B /* Pods_RxWeChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +96,7 @@
 		9F4CD1FB2261CFA1005A14BD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9F4CD2082261E2F8005A14BD /* SDK */,
 				9F4CD1FC2261CFA1005A14BD /* Core */,
 			);
 			path = Classes;
@@ -102,6 +110,18 @@
 				9F4CD1FE2261CFA1005A14BD /* WeChat.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9F4CD2082261E2F8005A14BD /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				9F4CD2092261E2F8005A14BD /* WXApi.h */,
+				9F4CD20A2261E2F8005A14BD /* WeChatSDK.modulemap */,
+				9F4CD20B2261E2F8005A14BD /* WXApiObject.h */,
+				9F4CD20C2261E2F8005A14BD /* WechatAuthSDK.h */,
+				9F4CD20D2261E2F8005A14BD /* libWeChatSDK.a */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 		DAFCE24166F8026C7737B430 /* Frameworks */ = {

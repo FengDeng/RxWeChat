@@ -1,0 +1,6 @@
+framework module WeChatSDK {
+    umbrella header "WXApi.h","WechatAuthSDK"
+    
+    export *
+    module * { export * }
+}
